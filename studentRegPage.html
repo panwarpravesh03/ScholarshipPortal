@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title >Student Registration Form</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="studentRegCSS.css">
+	</head>
+	<body>
+		<h1 style="text-align: center;">Student Registration Form</h1>
+		<div class="myForm">
+			<form action="#" name="stuRegForm" onsubmit="return validation()">
+				<div class="container">
+					<div class="formhead">Basic<span>Details</span></div> 
+				      	<hr> 
+				      	<div class="fdetails">
+				      		<table>
+				      			<tr>
+				      				<td colspan="2">Aadhar Number<input type="Number" id="aadhar" placeholder="Aadhar Number">
+				      					<div id="aadhar_error" class="errorMsg" ></div>
+				      				</td>
+							    	<td colspan="2">Enter Full Name<input type="text" id="fullname">
+							    		<div id="fullname_error" class="errorMsg" ></div>
+							    	</td> 
+						    	</tr>
+						    	<tr>
+						    		<td colspan="2"> Mobile No.<input type="text"  id="mobileno" >
+						    			<div id="mobileno_error" class="errorMsg" ></div>
+						    		</td>
+						    		<td colspan="2"> Enter Father Name<input type="text" id="fathername">
+						    			<div id="fathername_error" class="errorMsg" ></div>
+						    		</td> 
+						    	</tr>
+						    	<tr>
+						    		<td colspan="2"> Mother Name<input type="text"  id="mothername">
+						    			<div id="mothername_error" class="errorMsg" ></div>
+						    		</td>
+						    		<td colspan="2"> Gender    <input type="text" id="gender">
+						    			<div id="gender_error" class="errorMsg" ></div>
+						    		</td>
+						    	</tr>
+						    	<tr>
+						    		<td colspan="2"> Date Of Birth<input type="Date"  id="dob">
+						    			<div id="dob_error" class="errorMsg" ></div>
+						    		</td>
+						    		<td colspan="2"> Religion<select id="religion" >
+						    			  <option >------------Select Religion------------</option>
+										  <option >Hindu</option>
+										  <option >Christian</option>
+										  <option >Muslim</option>
+										  <option >Sikh</option>
+										  <option >Jain</option>
+										  <option >Buddhism</option>
+										</select>
+										<div id="religion_error" class="errorMsg" ></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Category/Community<input type="text" id="mstatus">
+										<div id="mstatus_error" class="errorMsg" ></div>
+									</td>
+								</tr>		    	
+					    	</table>
+				    	</div> 
+				</div>
+				<br><br><br>
+				<div class="container">  
+			      	<div class="formhead">Academic<span>Details</span></div>  
+			      	<hr>
+				      	<div class="fdetails">
+				      		<table>
+				      			<tr>
+				      				<td colspan="2">
+							    	Institue Name <select id="iname" >
+							    					  <option >------------Select Institute Name------------</option>
+													  <option >SAKEC</option>
+													  <option >Christian</option>
+													  <option >Muslim</option>
+													  <option >Sikh</option>
+													  <option >Jain</option>
+												  </select> 
+									</td>
+							    	<td colspan="2"> Current Course<input type="text"  id="Current_course"></td>
+							    </tr>
+							    <tr>
+							    	<td colspan="2"> Current Year<input type="text" id="Current_year"> </td>
+							    	<td colspan="2"> Mode Of Study<select id="mode">
+							    					<option>Full-Time</option>
+							    					<option>Part-Time</option>
+							    				</select></td>
+							    </tr>
+							    <tr>
+							    	<td colspan="2"> Class Start Date<input type="text" id="classstartd"></td>
+							    	<td colspan="2"> University Name<input type="text"  id="univ_name"></td>
+							    </tr>
+							    <tr>
+							    	<td colspan="2"> Previous Course<input type="text" id="prev_crs"></td>
+							    	<td colspan="2"> Previous Passing Year<input type="text"  id="prev_pass_year"></td>
+							    </tr>
+						    		<td colspan="2"> Previous Course %<input type="Number" id="prev_perc"></td>
+						  	    </table>
+					    </div>
+			   	</div>  
+			   	<br><br><br>
+			   	<div class="container">  
+			      	<div class="formhead">10th<span>Class</span></div>    
+			    	<hr>
+				    	<div class="fdetails">
+				    		<table>
+				    			<tr>
+							    	<td colspan="2" >Roll Number<input type="Number" id="xrollno"></td>
+							    	<td colspan="2"> Board Name<input type="text"  id="xbname"></td>
+						    	</tr>
+						    	<tr>
+							    	<td colspan="2"> Passing Year<input type="text" id="xpassyear"></td>
+							    	<td colspan="2"> Percentage Obtained<input type="Number"  id="xperc"></td>
+						    	</tr>
+					    	</table>
+				    	</div>
+			    </div>  
+			    <br><br><br>
+			    <div class="container">  
+			      	<div class="formhead">12th<span>Class</span></div>  
+			    	<hr>
+				    	<div class="fdetails">
+				    		<table>
+					    		<tr>
+							    	<td colspan="2"> Roll Number<input type="Number" id="xiirollno"></td>
+							    	<td colspan="2"> Board Name<input type="text"  id="xiibname"></td>
+						    	</tr>
+						    	<tr>
+							    	<td colspan="2"> Passing Year<input type="text" id="xiipassyear"></td>
+							    	<td colspan="2"> Percentage Obtained<input type="Number"  id="xiiperc"></td>
+						    	</tr>
+					    	</table>
+				    	</div>
+			    </div>
+			    <br><br><br>
+				<div class="container">  
+			      	<div class="formhead">Fee<span>Details</span></div> 
+			      	<hr> 
+				      	<div class="fdetails">
+				      		<table>
+				      			<tr>
+							    	<td colspan="2"> Admission Fee<input type="Number" id="admfee"></td>
+							    	<td colspan="2"> Tuition Fee<input type="Number"  id="tutfee"></td>
+						    	</tr>
+						    	<tr>
+						    		<td colspan="2"> Other Fee<input type="Number" id="othfee"></td>
+					    		</tr>
+					    	</table>
+				    	</div>
+			    </div>  
+			   	<br><br><br>
+			   	<div class="container">  
+			      	<div class="formhead">Other<span>Personal</span>Details</div> 
+			      	<hr>  
+				      	<div class="fdetails">
+				      		<table>
+				      			<tr>
+						    	<td colspan="2"> Is Disabled<select id="disabled">
+						    					<option>Yes</option>
+						    					<option>No</option>
+						    				</select></td>
+						    	<td colspan="2">Type Of Disability<input type="text"  id="tod"></td>
+						    	</tr>
+						    	<tr>
+						    	<td colspan="2">% Of Disability<input type="Number" id="percofdis"></td>
+						    	<td colspan="2">Marital Status<select id="mstatus">
+						    					<option>Married</option>
+						    					<option>Un-Married</option>
+						    					</select></td>
+						    	</tr>
+						    	<tr>
+						    	<td colspan="2">Parents Profession<input type="text" id="parpro"></td>
+					    		</tr>
+					    	</table>
+				    	</div>
+			   	</div>  
+			   	<br><br><br>
+			   	<div class="container">  
+			      	<div class="formhead">Address<span>Details</span></div> 
+			      	<hr>   
+			      	<div class="fdetails">
+			      		<table>
+			      			<tr>
+						    	<td colspan="2"> State<br><select name="stustate" id="stustate">
+						    			<option value="">------------Select State------------</option>
+										<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+										<option value="Andhra Pradesh">Andhra Pradesh</option>
+										<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+										<option value="Assam">Assam</option>
+										<option value="Bihar">Bihar</option>
+										<option value="Chandigarh">Chandigarh</option>
+										<option value="Chhattisgarh">Chhattisgarh</option>
+										<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+										<option value="Daman and Diu">Daman and Diu</option>
+										<option value="Delhi">Delhi</option>
+										<option value="Goa">Goa</option>
+										<option value="Gujarat">Gujarat</option>
+										<option value="Haryana">Haryana</option>
+										<option value="Himachal Pradesh">Himachal Pradesh</option>
+										<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+										<option value="Jharkhand">Jharkhand</option>
+										<option value="Karnataka">Karnataka</option>
+										<option value="Kerala">Kerala</option>
+										<option value="Lakshadweep">Lakshadweep</option>
+										<option value="Madhya Pradesh">Madhya Pradesh</option>
+										<option value="Maharashtra">Maharashtra</option>
+										<option value="Manipur">Manipur</option>
+										<option value="Meghalaya">Meghalaya</option>
+										<option value="Mizoram">Mizoram</option>
+										<option value="Nagaland">Nagaland</option>
+										<option value="Orissa">Orissa</option>
+										<option value="Pondicherry">Pondicherry</option>
+										<option value="Punjab">Punjab</option>
+										<option value="Rajasthan">Rajasthan</option>
+										<option value="Sikkim">Sikkim</option>
+										<option value="Tamil Nadu">Tamil Nadu</option>
+										<option value="Tripura">Tripura</option>
+										<option value="Uttaranchal">Uttaranchal</option>
+										<option value="Uttar Pradesh">Uttar Pradesh</option>
+										<option value="West Bengal">West Bengal</option>
+						    		</select></td>
+						    	<td colspan="2">District<select name="studistrict" id="studistrict" size="1">
+						    				<option>----------Select District--------</option>
+						    			</select></td> 
+					    	</tr>
+					    	<tr>
+						    	<td colspan="2">Block/Taluka<select id="stublock">
+						    					<option>Taluka</option>
+						    				</select></td>
+						    	<td colspan="2">House No<input type="Number" id="Pincode"></td>
+					    	</tr>
+					    	<tr>
+						    	<td colspan="2">Street No.<input type="text" id="addr"></td>
+						    	<td colspan="2">PinCode<input type="Number" id="Pincode"></td>
+					    	</tr>
+				    	</table>
+			    	</div>
+			   	</div> 
+			   	<br><br><br> 
+			   	<div class="container">  
+			      	<div class="formhead">Available<span>Scheme</span></div> 
+			      	<hr> 
+				      	<div class="fdetails">
+				      		<table>
+				      			<tr>
+				      				<td colspan="2"> Scholarship Scheme<select name="scholscheme" id="scholscheme">
+				    									<option >-------------Select Scheme-------------</option>
+				    									<option>Post Matric Scholarship</option>
+				    									<option>National Merit Scholarship</option>
+				    									<option>Central Scholarship Scheme</option>
+				    							</select></td>
+				    			</tr>
+				    		</table>
+				    	</div>
+			    </div> 
+			    <br><br><br> 
+			    <div class="container">  
+			      	<div class="formhead">Document<span>Upload</span>Section</div> 
+				      	<hr> 
+				      	<div class="fdetails">
+				      		<table>
+					      		<tr>
+							      	<td colspan="2">Domicile Certificate<input type="file" id="dom_cert"/></td>
+							    	<td colspan="2">Student Photograph<input type="file" id="stu_phg"/></td>
+							    </tr>
+							    <tr>
+							    	<td colspan="2">Institute ID Card<input type="file" id="ins_card" /></td>
+							    	<td colspan="2">Caste/Income Certificate<input type="file" id="inc_cert" /></td>
+							    </tr>
+							    <tr>
+							    	<td colspan="2">Previous Year Marksheet<input type="file" id="prev_mark" /></td>
+							    	<td colspan="2">Fee Receipt Of Current Year<input type="file" id="fee_rct" /></td>
+							    </tr>
+							    	<td colspan="2">Bank Passbook(Front Page)<input type="file" id="bank_pass" /></td>
+							    	<td colspan="2">Aadhar Card<input type="file" id="aad_card" /></td>
+							    <tr>
+							    	<td colspan="2">10th Class Marksheet<input type="file" id="ssc_cert" /></td>
+							    	<td colspan="2">12th Class Marksheet<input type="file" id="hsc_cert" /></td>
+							    </tr>
+							</table>
+				    	</div>
+			    </div>
+			    <br><br><br> 
+			    <div class="container">
+			    	<div class="fdetails">
+				   		 <input type="checkbox" id="accept" > All the details furnished by me are true  to the best of my knowledge if any mistakes are found then I many be disqualified for this scholarship scheme announced by government of india or by state government
+					</div>
+				</div>
+			    <br><br><br> 
+			    <div class="container">  
+			      	<hr> 
+				    <div class="fdetails">
+				    	<table>
+				    		<tr>
+				    			<td colspan="2"><div class="formhead">Sub<span>mit</span></div><input type="submit" value="Submit Form"></td>
+				    			<td colspan="2"><div class="formhead">Res<span>et</span></div><input type="reset"></td>
+				    		</tr>
+				    	</table>
+				    </div>
+			    </div> 
+			    <br><br><br> 
+			</form>
+		</div>
+		<script type="text/javascript" src="studentRegJS.js"></script>
+	</body>
+</html>

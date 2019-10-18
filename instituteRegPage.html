@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Institue Registration Form</title>
+		<link rel="stylesheet" type="text/css" href="instituteRegCSS.css">
+		
+	</head>
+	<body>
+		<div class="formhead" style="text-align: center;">Institute<span>Registration</span>Form</div><br>
+		<div class="instituregform">
+			<form action="#" name="insRegForm" onsubmit="return validation()">
+				<div class="container">  
+					<div class="formhead">Basic<span>Details</span></div>
+					<hr>
+					<div class="fdetails">
+						<table>
+							<tr>
+								<td colspan="2">Institute Category <select id="inscag">
+														<option disabled selected value= "defaultVal">------------Select Institute Category------------</option>
+														<option value="CU" >Central University</option>
+														<option value="SU">State University</option>
+														<option value="PU">Private University</option>
+														<option value="DU">Deemed University</option>
+														</select> 
+									<div id="inscag_error" class="errorMsg" ></div>
+								</td>
+								<td colspan="2">Institute Name<input type="text" id="iname">
+									<div id="iname_error" class="errorMsg" ></div>
+								</td>
+							</tr>
+
+							<tr>
+								<td colspan="2">State<br><select name="stateSel" id="stateSel" size="1" onchange="makeSubmenu(this.value)">
+															<option value= "defaultVal" disabled selected>------------Select State------------</option>
+															<option >Andaman and Nicobar Islands</option>
+															<option >Andhra Pradesh</option>
+															<option>Arunachal Pradesh</option>
+															<option >Assam</option>
+															<option >Bihar</option>
+															<option >Chandigarh (UT)</option>
+															<option >Chhattisgarh</option>
+															<option >Dadra and Nagar Haveli (UT)</option>
+															<option >Daman and Diu (UT)</option>
+															<option >Delhi (NCT)</option>
+															<option >Goa</option>
+															<option >Gujarat</option>
+															<option >Haryana</option>
+															<option >Himachal Pradesh</option>
+															<option >Jammu and Kashmir</option>
+															<option >Jharkhand</option>
+															<option >Karnataka</option>
+															<option >Kerala</option>
+															<option >Lakshadweep (UT)</option>
+															<option >Madhya Pradesh</option>
+															<option >Maharashtra</option>
+															<option >Manipur</option>
+															<option >Meghalaya</option>
+															<option >Mizoram</option>
+															<option >Nagaland</option>
+															<option >Odisha</option>
+															<option >Puducherry (UT)</option>
+															<option >Punjab</option>
+															<option >Rajasthan</option>
+															<option >Sikkim</option>
+															<option >Tamil Nadu</option>
+															<option >Telangana</option>
+															<option >Tripura</option>
+															<option >Uttarakhand</option>
+															<option >Uttar Pradesh</option>
+															<option >West Bengal</option>
+														 </select>
+									<div id="stateSel_error" class="errorMsg" ></div>
+								</td> 
+								<td colspan="2">District<select name="districtSel" id="districtSel" >
+															<option value="defaultVal" disabled selected>---------Choose City-------</option>
+														</select>
+									<div id="districtSel_error" class="errorMsg" ></div>
+								</td> 
+							</tr>
+							<tr>
+									<td colspan="2">Institute Code<input type="number" id="inscode">
+										<div id="inscode_error" class="errorMsg" ></div>
+									</td>
+									<td colspan="2">Dise Code<input type="text" id="disecode">
+										<div id="disecode_error" class="errorMsg" ></div>
+									</td>
+							</tr>
+							<tr>
+									<td colspan="2">Location</td>
+									<td colspan="1"><input type="radio" id="loc" value="Rural" checked/> Rural</td> 
+									<td colspan="1"><input type="radio" id="loc" value="urban"/> Urban </td>
+							</tr>
+							<tr>
+									<td colspan="2">Institute Type <select id="itype" >
+														<option disabled selected value="defaultVal">------------Select Institute Type------------</option>
+														<option >Central University</option>
+														<option >State University</option>
+														<option >Private University</option>
+														<option >Deemed University</option>
+														</select>
+										<div id="itype_error" class="errorMsg" ></div>
+									</td>
+									<td colspan="2">Affiliated University State <select id="iaffstate" >
+														<option value="defaultVal" disabled selected>------------Select Affiliated Institute State------------</option>
+														<option >Andaman and Nicobar Islands</option>
+														<option >Andhra Pradesh</option>
+														<option>Arunachal Pradesh</option>
+														<option >Assam</option>
+														<option >Bihar</option>
+														<option >Chandigarh (UT)</option>
+														<option >Chhattisgarh</option>
+														<option >Dadra and Nagar Haveli (UT)</option>
+														<option >Daman and Diu (UT)</option>
+														<option >Delhi (NCT)</option>
+														<option >Goa</option>
+														<option >Gujarat</option>
+														<option >Haryana</option>
+														<option >Himachal Pradesh</option>
+														<option >Jammu and Kashmir</option>	
+														<option >Jharkhand</option>
+														<option>Karnataka</option>														
+														<option >Kerala</option>
+														<option >Lakshadweep (UT)</option>
+														<option >Madhya Pradesh</option>
+														<option >Maharashtra</option>
+														<option >Manipur</option>
+														<option >Meghalaya</option>
+														<option >Mizoram</option>
+														<option >Nagaland</option>
+														<option >Odisha</option>
+														<option >Puducherry (UT)</option>
+														<option >Punjab</option>
+														<option >Rajasthan</option>
+														<option >Sikkim</option>
+														<option >Tamil Nadu</option>
+														<option >Telangana</option>
+														<option >Tripura</option>
+														<option >Uttarakhand</option>
+														<option >Uttar Pradesh</option>
+														<option >West Bengal</option>
+														</select> 
+										<div id="iaffstate_error" class="errorMsg" ></div>
+									</td>
+							</tr>
+							<tr>
+									<td colspan="2">Affiliated University/Board id<select id="iaffuniv" >
+																	<option value="defaultVal" disabled selected>------------Select Affiliated Institute Name------------</option>
+																	<option >Mumbai University</option>
+																	<option >Shivaji University</option>
+																	<option >North Maharashtra University</option>
+																	<option >Gondwana University</option>
+																	<option>University of Solapur</option>
+																	</select>
+										<div id="iaffuniv_error" class="errorMsg" ></div>
+									</td>		 					
+									<td colspan="2">Year From Which Admission Started<input type="date" id="iadmstart">
+										<div id="iadmstart_error" class="errorMsg" ></div>
+									</td>
+							</tr>
+							<tr>
+									<td colspan="2">Set Password<br><input type="password" id="ispwd" >
+										<div id="ispwd_error" class="errorMsg" ></div>
+									</td>
+									<td colspan="2">Confirm Password<input type="password" id="iconfpwd">
+										<div id="iconfpwd_error" class="errorMsg" ></div>
+									</td>
+							</tr>
+						</table>
+					</div>
+				</div> 
+				<br><br><br>
+				<div class="container">  
+					<div class="formhead">Proof<span>Of</span>Existence<span>Of</span>Institue</div>
+					<hr>  
+					<div class="fdetails"> 
+						Institute Establishment/Registration Certificate<input type="file" name="insest_cert" />
+					</div>
+				</div>  
+				<br><br><br>
+				<div class="container">  
+					<div class="formhead">Affiliated<span>To</div> 
+					<hr> 
+					<div class="fdetails">
+						Univeristy/Board Affilaition Certificate<input type="file" name="univaffl_cert"/>
+					</div>
+				</div>  
+				<br><br><br>
+				<div class="container">  
+					<div class="formhead">De<span>tails</span></div>
+					<hr>  
+					<div class="fdetails">  
+						<table>
+							<tr>
+								<td colspan="2">Line 1<br><input type="text" id="ilineOne" >
+									<div id="ilineOne_error" class="errorMsg" ></div>
+								</td>
+								<td colspan="2">Line 2<input type="Password" id="ilineTwo">
+									<div id="ilineTwo_error" class="errorMsg" ></div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">City<br><input type="text" id="icity">
+									<div id="icity_error" class="errorMsg" ></div>
+								</td>
+								<td colspan="2">State<br><input type="text"  id="istate">
+									<div id="istate_error" class="errorMsg" ></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<br><br><br>
+				<div class="container">
+					<div class="formhead">Contact<span>Details</span></div>
+					<hr>  
+					<div class="fdetails">  
+						<table>
+							<tr>
+								<td colspan="2">Principal Name<input type="text" id="ipriname">
+									<div id="ipriname_error" class="errorMsg" ></div>
+								</td>
+								<td colspan="2">Mobile Number<input type="Number"  id="imobno">
+									<div id="imobno_error" class="errorMsg" ></div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">Telephone<input type="Number" id="itele">
+									<div id="itele_error" class="errorMsg" ></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>  
+				<br><br>
+				<div class="container">
+			    	<div class="fdetails">
+				   		 <input type="checkbox" id="iaccept" > All the details and documents submitted by us are valid and true . If found guilty of submitting invalid documents, we may be held responsible for that act by us
+					</div>
+				</div>
+				<br><br><br>
+				<div class="container">  
+			      	<hr> 
+				    <div class="fdetails">
+				    	<table>
+				    		<tr>
+				    			<td colspan="2"><div class="formhead">Sub<span>mit</span></div><input type="submit" value="Submit Form"></td>
+				    			<td colspan="2"><div class="formhead">Res<span>et</span></div><input type="reset"></td>
+				    		</tr>
+				    	</table>
+				    </div>
+			    </div> 
+				
+			</form>
+		</div>
+		<script type="text/javascript" src="instituteRegJS.js"></script>
+	</body>
+</html>
