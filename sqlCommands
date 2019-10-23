@@ -1,0 +1,25 @@
+CREATE SEQUENCE seq_institute
+START WITH 20001
+INCREMENT BY 1;
+
+
+
+create table InstituteRegistration
+(
+instituteCategory varchar2(15),
+instituteName varchar2(15),
+state varchar2(15),
+district varchar2(15),
+instituteCode int primary key,
+location varchar2(15),
+type varchar2(15),
+aff varchar2(15),
+affUniName varchar2(15),
+yearFromAdmissionStarted date,
+password varchar2(30),
+address varchar2(15),
+principalName varchar2(15),
+principalMobileNumber int
+);
+
+
